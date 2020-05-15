@@ -1,0 +1,12 @@
+<% @projects.each do |project| %>
+  <section id="project-<%=project.id%>">
+    <h2><%=project.name%></h2><br />
+    <%="Material: #{project.material}"%><br />
+    <%="Challenge Theme: #{project.challenge.theme}"%><br />
+    <%= "Number of contestants: #{project.contestants.count}"%>
+    <p> Average Contestant Experience: </p>
+    <% project.contestants.each do |contestant| %>
+      <li><%= "#{contestant.name}: #{contestant.average_experience}" %></li>
+    <% end %>
+  </section>
+<% end %>
