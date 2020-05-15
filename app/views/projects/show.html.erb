@@ -6,7 +6,7 @@
     <%= "Number of contestants: #{project.contestants.count}"%>
     <p> Average Contestant Experience: </p>
     <% project.contestants.each do |contestant| %>
-      <li><%= "#{contestant.name}: #{contestant.average_experience}" %></li>
+      <li><%= "#{contestant.name}: #{contestant.average_experience} years" %></li>
     <% end %>
   </section>
 <% end %>
