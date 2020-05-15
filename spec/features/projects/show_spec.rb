@@ -47,7 +47,6 @@ RSpec.describe "As a visitor" do
         expect(page).to have_content("Challenge Theme: #{furniture_challenge.theme}")
         expect(page).to have_content("Number of contestants: #{upholstery_tux.contestants.count}") 
         expect(page).to have_content("Average Contestant Experience:") 
-        save_and_open_page
       end
 
       visit"/projects/#{lit_fit.id}"
